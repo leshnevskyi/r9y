@@ -4,7 +4,7 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 
-class SolveIvpResult(TypedDict):
+class IvpSolution(TypedDict):
     t: np.ndarray
     y: np.ndarray
     sol: Optional[Callable[[float], np.ndarray]]
@@ -40,7 +40,7 @@ def solve_r9y_sys_nonrec(
     y0: List[float],
     lam: Tuple[float, float, float],
     t_eval: np.ndarray,
-) -> SolveIvpResult:
+) -> IvpSolution:
     return solve_ivp(
         r9y_sys_nonrec,
         t_span,
