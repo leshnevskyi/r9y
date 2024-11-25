@@ -28,8 +28,8 @@ def r9y_sys_nonrec(_: float, y: List[float], lam: List[float]) -> List[float]:
         l2 * y[0] - (l1 + l3) * y[2],
         l3 * y[0],
         l3 * y[1],
-        l2 * y[1] + l3 * y[2],
-        l1 * y[2],
+        l2 * y[1] + l1 * y[2],
+        l3 * y[2],
     ]
 
 
